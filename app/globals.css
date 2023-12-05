@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(222.2, 84%, 4.9%);
+    
+    /* ... outras variáveis de cor ... */
+  }
+
+  .dark {
+    --background: hsl(222.2, 84%, 4.9%);
+    --foreground: hsl(210, 40%, 98%);
+    
+    /* ... outras variáveis de cor para o modo escuro ... */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  /* Adicionando uma borda preta de 1 pixel a todos os elementos */
+  * {
+    @apply border border-black;
+  }
+}
+
+@layer utilities {
+  /* ... (outras classes de utilitários, se necessário) ... */
 }
