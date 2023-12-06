@@ -2,29 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(222.2, 84%, 4.9%);
-    
-    /* ... outras variáveis de cor ... */
-  }
-
-  .dark {
-    --background: hsl(222.2, 84%, 4.9%);
-    --foreground: hsl(210, 40%, 98%);
-    
-    /* ... outras variáveis de cor para o modo escuro ... */
-  }
-}
-
-@layer components {
-  /* Adicionando uma borda preta de 1 pixel a todos os elementos */
-  * {
-    @apply border border-black;
-  }
-}
-
-@layer utilities {
-  /* ... (outras classes de utilitários, se necessário) ... */
-}
