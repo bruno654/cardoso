@@ -1,6 +1,4 @@
 import UploadButton from "@/app/components/UploadButton";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { sql } from "@vercel/postgres";
 import { useSearchParams } from "next/navigation";
 
@@ -27,11 +25,10 @@ export default function NewCourse({
         <div>
             <h1 className=" text-center text-4xl">Cadastrar Cursos</h1>
             <form>
-                <Input type="text" name="title" placeholder="Digite o Título do Curso"/><br/>
-                <Input type="text" name="description" placeholder="Digite a Descriçao do curso"/> <br/>
+                
                 <br/>
                 <UploadButton /> <br/>
-                <Button formAction={saveCourse} className="text-white">Salvar</Button>
+                
             </form>
         </div>
 
