@@ -27,7 +27,7 @@ export default function NewCourse({
             <form>
                 
                 <br/>
-                <UploadButton /> <br/>
+                <button /> <br/>
                 
             </form>
         </div>

@@ -1,20 +1,28 @@
-"use client"
+import React from 'react';
 
-import {  useRouter } from "next/navigation";
-
-export default function UploadButton(){
-    const router = useRouter()
-    
-    function handleUpload(result:any, widget:any){
-
-       router.push(`?url=${result?.info?.url}`)
-
-        widget.close()
-    }
-    return(
-        <UploadButton ="bg-slate-200 px-3 py-2 rounded"
-        onUpload={handleUpload}
-        uploadPreset="yldnvxkv"
-        />
-    )
+interface UploadButtonProps {
+  onUpload: (result: any, widget: any) => void;
+  uploadPreset: string;
+  className?: string;
 }
+
+const UploadButton: React.FC<UploadButtonProps> = ({ onUpload, uploadPreset, className }) => {
+  const handleUpload = () => {
+    // Lógica de upload aqui...
+
+    // Suponhamos que o 'result' e o 'widget' são retornados após o upload bem-sucedido
+    const result = /* resultado do upload */;
+    const widget = /* objeto do widget ou outro resultado */;
+    
+    // Executar a função de manipulação do upload fornecida por 'onUpload'
+    onUpload(result, widget);
+  };
+
+  return (
+    <button className={className} onClick={handleUpload}>
+      Upload
+    </button>
+  );
+};
+
+export default UploadButton;
