@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 import { sql } from "@vercel/postgres";
 import { revalidatePath } from "next/cache";
 
@@ -28,8 +28,7 @@ export default async function ListCourse() {
                                 <td>
                                     <form >
                                      <input type="text" hidden name="id" value={course.id}/>   
-                                    <Button variant= "destructive"
-                                     formAction={deleteCourse}>Excluir</Button>
+                                    
                                     </form>
                                 
                                 </td> 
