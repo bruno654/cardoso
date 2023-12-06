@@ -1,5 +1,5 @@
 "use client"
-import { CldUploadButton } from "next-cloudinary";
+
 import {  useRouter } from "next/navigation";
 
 export default function UploadButton(){
@@ -12,7 +12,7 @@ export default function UploadButton(){
         widget.close()
     }
     return(
-        <CldUploadButton className="bg-slate-200 px-3 py-2 rounded"
+        <UploadButton ="bg-slate-200 px-3 py-2 rounded"
         onUpload={handleUpload}
         uploadPreset="yldnvxkv"
         />
